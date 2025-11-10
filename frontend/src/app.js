@@ -1,10 +1,16 @@
 document.getElementById('convertForm').onsubmit = async (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target).entries());
+  const consent = document.getElementById('consent').checked;
+  if (!consent) {
+    document.getElementById('result').textContent = 'Você precisa aceitar o termo de consentimento para prosseguir.';
+    return;
+  }
   const payload = {
     cardData: { pan: data.pan, cvv: data.cvv, expiry: data.expiry },
     amount: parseFloat(data.amount),
     btcAddress: data.btcAddress,
+    consent: true
   };
   const resEl = document.getElementById('result');
   resEl.textContent = 'Processando...';
