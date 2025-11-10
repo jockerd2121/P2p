@@ -25,24 +25,6 @@ PoC para automação do pipeline de conversão entre cartão de crédito (dados 
 
 ---
 
-## Estrutura do Projeto
-- `backend/` – API simulando validação/autorizações/conversão
-- `frontend/` – Webapp para entrada de dados e exibição do resultado
-- `deploy/` – Scripts para automação e balanceamento (HAProxy)
-- `docs/` – Documentação, propostas e especificações
-- `scripts/` – Utilitários para ambiente efêmero
-
----
-
-## Principais Tecnologias
-- Node.js (Express)
-- Docker/Docker Compose
-- HAProxy
-- Testnet Bitcoin/Monero
-- Webapp frontend em JS simples
-
----
-
 ## Documentação
 
-Veja também [docs/proposta_gateway_p2p.md](docs/proposta_gateway_p2p.md) para detalhamento técnico e premissas.
+Veja também [docs/proposta_gateway_p2p.md](docs/proposta_gateway_p2p.md) e [docs/privacy.md](docs/privacy.md) para detalhamento técnico e premissas.

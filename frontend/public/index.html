@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Gateway P2P Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 720px; margin: 24px auto; }
+      .consent { background: #f6f9f6; padding: 12px; border-radius: 6px; margin-top: 12px; }
+    </style>
   </head>
   <body>
     <h1>Converter Cartão Teste ➔ Cripto (Demo)</h1>
+    <p>Ambiente de testes. Leia o termo de consentimento antes de prosseguir.</p>
+
     <form id="convertForm">
       <label>PAN (cartão teste):</label>
       <input name="pan" required pattern="4[0-9]{15}" /><br />
@@ -14,10 +20,17 @@
       <input name="cvv" required pattern="[0-9]{3,4}" /><br />
       <label>Validade (MM/AA):</label>
       <input name="expiry" required pattern="(0[1-9]|1[0-2])/[0-9]{2,4}" /><br />
-      <label>Valor:</label>
+      <label>Valor (USD):</label>
       <input name="amount" type="number" required min="1" step="0.01" /><br />
       <label>Endereço BTC (testnet):</label>
       <input name="btcAddress" required /><br />
+
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" />
+        <label for="consent"><strong>Li e concordo com o teste em ambiente sandbox:</strong> entendo que este é um teste em modo <em>testnet/sandbox</em>, que não será utilizado dinheiro real, e que meus dados sensíveis não serão armazenados.</label>
+        <p><a href="/docs/privacy.md" target="_blank">Leia mais sobre privacidade e medidas de segurança</a></p>
+      </div>
+
       <button type="submit">Converter</button>
     </form>
     <div id="result" style="margin-top:16px"></div>
