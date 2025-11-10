@@ -1,0 +1,10 @@
+{
+  "name": "gateway-p2p-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve -s public -l 5000"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
